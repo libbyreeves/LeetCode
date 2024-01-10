@@ -30,7 +30,26 @@
 
         //2704. To Be Or Not To Be
 
+            const expect = function (initialValue) {
+                return {
+                    toBe: function (val) {
+                        if (initialValue === val) {
+                            return true;
+                        } else {
+                            throw new Error("Not Equal");
+                        }
+                    },
 
+                    notToBe: function (val) {
+                        if (initialValue !== val) {
+                            return true;
+                        } else {
+                            throw new Error("Equal");
+                        }
+                    }
+                };
+
+                };
 
        
        
