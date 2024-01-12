@@ -54,32 +54,50 @@
        
        //Counter II
 
-       const createCounter = function (init) {
-            let count = init;
-            let numArray = [];
-            return {
-                increment: function () {
-                    count++;
-                    numArray.push(count);
-                    return (count);
-                },
+    //    const createCounter = function (init) {
+    //         let count = init;
+    //         let numArray = [];
+    //         return {
+    //             increment: function () {
+    //                 count++;
+    //                 numArray.push(count);
+    //                 return (count);
+    //             },
 
-                decrement: function () {
-                    count--;
-                    numArray.push(count);
-                    return (count);
-                },
+    //             decrement: function () {
+    //                 count--;
+    //                 numArray.push(count);
+    //                 return (count);
+    //             },
 
-                reset: function () {
-                    count = init;
-                    numArray.push(count);
-                    return (count);
-                }
+    //             reset: function () {
+    //                 count = init;
+    //                 numArray.push(count);
+    //                 return (count);
+    //             }
 
 
 
+    //         }
+    //     }
+
+    //Apply Transofmr Over Each Element in Array
+        //given input is an array, and a function
+        //return a new array with a transformation to each element
+            //returnedArray[i] = fn(arr[i], i)
+        //do not use Array.map
+        const map = function (arr, fn) {
+            for (let i = 0; i < arr.length; i++) {
+                //apply the function to each value in the array
+                //push values into a new array
+                console.log(arr[i]);
+                arr[i] = fn(arr[i], i);
             }
-        }
+            return arr;
+            };
+        
+            map([1,2,3]);
+
     </script>
     
 </body>
