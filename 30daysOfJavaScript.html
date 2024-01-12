@@ -30,29 +30,56 @@
 
         //2704. To Be Or Not To Be
 
-            const expect = function (initialValue) {
-                return {
-                    toBe: function (val) {
-                        if (initialValue === val) {
-                            return true;
-                        } else {
-                            throw new Error("Not Equal");
-                        }
-                    },
+            // const expect = function (initialValue) {
+            //     return {
+            //         toBe: function (val) {
+            //             if (initialValue === val) {
+            //                 return true;
+            //             } else {
+            //                 throw new Error("Not Equal");
+            //             }
+            //         },
 
-                    notToBe: function (val) {
-                        if (initialValue !== val) {
-                            return true;
-                        } else {
-                            throw new Error("Equal");
-                        }
-                    }
-                };
+            //         notToBe: function (val) {
+            //             if (initialValue !== val) {
+            //                 return true;
+            //             } else {
+            //                 throw new Error("Equal");
+            //             }
+            //         }
+            //     };
 
-                };
+            //     };
 
        
-       
+       //Counter II
+
+       const createCounter = function (init) {
+            let count = init;
+            let numArray = [];
+            return {
+                increment: function () {
+                    count++;
+                    numArray.push(count);
+                    return (count);
+                },
+
+                decrement: function () {
+                    count--;
+                    numArray.push(count);
+                    return (count);
+                },
+
+                reset: function () {
+                    count = init;
+                    numArray.push(count);
+                    return (count);
+                }
+
+
+
+            }
+        }
     </script>
     
 </body>
