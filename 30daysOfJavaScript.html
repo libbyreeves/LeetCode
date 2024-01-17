@@ -86,17 +86,34 @@
         //return a new array with a transformation to each element
             //returnedArray[i] = fn(arr[i], i)
         //do not use Array.map
-        const map = function (arr, fn) {
-            for (let i = 0; i < arr.length; i++) {
+        // const map = function (arr, fn) {
+        //     for (let i = 0; i < arr.length; i++) {
                 //apply the function to each value in the array
                 //push values into a new array
-                console.log(arr[i]);
-                arr[i] = fn(arr[i], i);
-            }
-            return arr;
-            };
+            //     console.log(arr[i]);
+            //     arr[i] = fn(arr[i], i);
+            // }
+            // return arr;
+            // };
         
-            map([1,2,3]);
+            // map([1,2,3]);
+
+        //Filter Elements from Array
+            //given an integer array []
+            //given a filtering function fn(arr[i], i)
+            //return a filtered array []
+
+        const filter = function(arr, fn) {
+            let filteredArr = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (fn(arr[i], i) === true || fn(arr[i], i) != 0) {
+                   
+                    filteredArr.push(arr[i])
+                } 
+            }
+            return filteredArr;
+        };
+
 
     </script>
     
